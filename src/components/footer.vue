@@ -53,7 +53,7 @@
           <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
           <p>
             <i class="fas fa-home mr-3"
-              >Njomzë Lipaj, no:11,/n Kosovo Prishtinë</i
+              >Njomzë Lipaj, no:11, Kosovo Prishtinë</i
             >
           </p>
           <p>
