@@ -4,7 +4,7 @@
       <div class="row" style="height: 500px">
         <img src="../assets/logo.png" class="splash-logo" />
       </div>
-      <h2
+      <!--       <h2
         style="
           color: white;
           text-align: center;
@@ -41,8 +41,8 @@
           "
         >
           is under constuction!</span
-        >
-      </h2>
+        > 
+      </h2> -->
       <br />
       <div class="row menu">
         <div class="col-lg-4 col-xs-12 menuItem" id="video">
