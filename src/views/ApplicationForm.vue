@@ -120,7 +120,7 @@
 <script>
 import { db } from "../firebase";
 
-const documentPath = "contacts/";
+const documentPath = "workshopApplications/";
 
 export default {
   data() {
@@ -146,7 +146,7 @@ export default {
           .doc(
             documentPath +
               this.formData.name +
-              this.formData.name +
+              this.formData.lastName +
               "-" +
               Math.floor(Math.random() * Math.floor(999)).toString()
           )
