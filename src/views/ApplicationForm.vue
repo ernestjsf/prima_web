@@ -7,10 +7,14 @@
       <input type="tel" name="name" v-model="formData.phone" />
       <button type="submit">submit</button>
     </form> -->
-    <form @submit.prevent="updateFirebase">
-      <div class="container" id="container">
+    <div class="container" id="container">
+      <div class="splash-logo-size float-right">
+        <img src="../assets/logo.png" class="splash-logo" />
+      </div>
+      <h1>Worskhop</h1>
+      <form @submit.prevent="updateFirebase">
         <div class="row justify-content-md-center">
-          <div class="form-group col-4">
+          <div class="form-group col-12 col-sm-4">
             <label for="exampleInputEmail1">Name</label>
             <input
               type="text"
@@ -22,7 +26,7 @@
               >We'll never share your email with anyone else.</small
             >
           </div>
-          <div class="form-group col-6">
+          <div class="form-group col-12 col-sm-6">
             <label for="exampleInputEmail1">Last Name</label>
             <input
               type="text"
@@ -36,23 +40,87 @@
             >
           </div>
         </div>
+        <hr />
+        <div class="row justify-content-md-center">
+          <div class="form-group col-12 col-sm-3">
+            <label>Birdhdate</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              v-model="formData.birthDate"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-3">
+            <label>Country</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              v-model="formData.country"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-4">
+            <label>City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              v-model="formData.city"
+              aria-describedby="emailHelp"
+            />
+          </div>
+        </div>
+        <hr />
+        <div class="row justify-content-md-center">
+          <div class="form-group col-12 col-sm-2">
+            <label>Language</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              v-model="formData.language"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-4">
+            <label>Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              v-model="formData.email"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-4">
+            <label>City</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              v-model="formData.city"
+              aria-describedby="emailHelp"
+            />
+          </div>
+        </div>
         <!-- <input
           type="text"
           aria-label="Last name"
           class="form-control"
           v-model="formData.lastName"
         /> -->
-        <div class="row justify-content-md-center">
+        <div class="row justify-content-center">
           <button
             type="submit"
-            class="btn btn-light col-12 col-sm-4"
+            class="btn btn-primary col-10 col-sm-6"
             id="submitButton"
           >
             Submit
           </button>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </template>
 <script>
@@ -106,9 +174,18 @@ export default {
   label {
     color: white;
   }
+  h1 {
+    margin-top: 200px;
+    color: white;
+  }
+  .splash-logo {
+    width: 200px;
+    overflow: hidden;
+    object-fit: cover;
+  }
 }
 
 #submitButton {
-  margin: 20px 0 0 0;
+  margin: 40px 0 0 0;
 }
 </style>
