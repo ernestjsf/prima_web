@@ -12,9 +12,9 @@
         <router-link to="/">
           <img src="../assets/logo.png" class="splash-logo" />
         </router-link>
+        <h1>Cine qua non series vol.1</h1>
+        <h3>Worskhop Application Form</h3>
       </div>
-      <h1>Worskhop Application Form</h1>
-      <h2>Cine qua non series vol.1</h2>
       <form @submit.prevent="updateFirebase">
         <div class="row justify-content-start">
           <div class="form-group col-12 col-sm-5">
