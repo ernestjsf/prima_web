@@ -7,11 +7,14 @@
       <input type="tel" name="name" v-model="formData.phone" />
       <button type="submit">submit</button>
     </form> -->
-    <div class="container" id="container">
+    <div class="container applicationForm">
       <div class="splash-logo-size float-right">
-        <img src="../assets/logo.png" class="splash-logo" />
+        <router-link to="/">
+          <img src="../assets/logo.png" class="splash-logo" />
+        </router-link>
       </div>
       <h1>Worskhop Application Form</h1>
+      <h2>Cine qua non series vol.1</h2>
       <form @submit.prevent="updateFirebase">
         <div class="row justify-content-start">
           <div class="form-group col-12 col-sm-5">
@@ -19,6 +22,7 @@
             <input
               type="text"
               class="form-control"
+              placeholder="Enter your name"
               id="exampleInputEmail1"
               v-model="formData.name"
             />
@@ -29,19 +33,21 @@
               type="text"
               class="form-control"
               id="exampleInputEmail1"
+              placeholder="Enter your last name"
               v-model="formData.lastName"
               aria-describedby="emailHelp"
             />
           </div>
         </div>
-        <hr />
+        <hr color="white" />
         <div class="row justify-content-start">
           <div class="form-group col-12 col-sm-4">
-            <label>Birdhdate</label>
+            <label>Birdh date</label>
             <input
               type="text"
               class="form-control"
               id="exampleInputEmail1"
+              placeholder="Enter your birth date"
               v-model="formData.birthDate"
             />
           </div>
@@ -51,6 +57,7 @@
               type="text"
               class="form-control"
               id="exampleInputEmail1"
+              placeholder="Enter your country"
               v-model="formData.country"
               aria-describedby="emailHelp"
             />
@@ -61,12 +68,53 @@
               type="text"
               class="form-control"
               id="exampleInputEmail1"
+              placeholder="Enter your city"
               v-model="formData.city"
               aria-describedby="emailHelp"
             />
           </div>
         </div>
-        <hr />
+        <hr color="white" />
+        <div class="row justify-content-start">
+          <div class="form-group col-12 col-sm-5">
+            <label>Occupation or University Department</label>
+
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Enter your occupation or university depratment"
+              v-model="formData.occupation"
+            />
+          </div>
+          <div class="form-group col-12 col-sm-5">
+            <label>Email</label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Enter your email"
+              v-model="formData.email"
+              aria-describedby="emailHelp"
+            />
+          </div>
+        </div>
+        <hr color="white" />
+        <div class="row justify-content-start">
+          <div class="form-group col-12 col-sm-12">
+            <label>About you?</label>
+
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="What defines you and connects you to cinema?"
+              v-model="formData.about"
+            />
+          </div>
+        </div>
+        <hr color="white" />
+
         <div class="row justify-content-start">
           <div class="form-group col-12 col-sm-5">
             <div class="label">Language Preference</div>
@@ -76,27 +124,16 @@
             <input
               type="text"
               class="form-control"
+              placeholder="Just English / with Albanian translation"
               id="exampleInputEmail1"
               v-model="formData.language"
             />
           </div>
-          <div class="form-group col-12 col-sm-5">
-            <label>Email</label>
-            <input
-              type="text"
-              class="form-control"
-              id="exampleInputEmail1"
-              v-model="formData.email"
-              aria-describedby="emailHelp"
-            />
-          </div>
-          <small
-            id=""
-            class="form-text text-muted just"
-            style="margin-left: 20px"
-            >We'll never share your information with anyone else.</small
-          >
         </div>
+
+        <small id="" class="form-text text-muted just" style="margin-left: 20px"
+          >We'll never share your information with anyone else.</small
+        >
 
         <!-- <input
           type="text"
@@ -107,7 +144,7 @@
         <div class="row justify-content-end">
           <button
             type="submit"
-            class="btn btn-primary col-10 col-sm-6"
+            class="btn btn-primary col-12 col-sm-6"
             id="submitButton"
           >
             Submit
@@ -152,7 +189,7 @@ export default {
           )
           .set(this.formData);
         this.state = "synced";
-        this.$router.push("/about");
+        this.$router.push("/formsubmitted");
       } catch (error) {
         this.errorMessage = JSON.stringify(error);
         this.state = "error";
@@ -162,7 +199,7 @@ export default {
 };
 </script>
 <style lang="scss">
-#container {
+.applicationForm {
   padding-top: 20px;
   padding-bottom: 100px;
   background-color: rgb(17, 27, 37);
@@ -173,9 +210,16 @@ export default {
     color: white;
   }
   h1 {
+    font-weight: 400;
     margin-left: 0px;
     margin-top: 160px;
     color: white;
+  }
+  h2 {
+    font-weight: 300;
+    margin-left: 0px;
+    color: white;
+    margin-bottom: 20;
   }
   .splash-logo {
     width: 200px;
@@ -188,6 +232,6 @@ export default {
 }
 
 #submitButton {
-  margin: 40px 18px 0 0;
+  margin: 40px 0px 0 0;
 }
 </style>

@@ -46,13 +46,13 @@
       <br />
       <div class="row menu">
         <div class="col-lg-4 col-xs-12 menuItem" id="video">
-          <a href="pages/academy/academy.html">Video Production</a>
+          <router-link to="/videoproduction">Video Production</router-link>
         </div>
         <div class="col-lg-4 col-xs-12 menuItem" id="academy">
-          <a href="pages/academy1/academy.html">Academy</a>
+          <router-link to="/academy">Academy</router-link>
         </div>
         <div class="col-lg-4 col-xs-12 menuItem" id="sound">
-          <a href="pages/sound_production/academy.html">Sound Production</a>
+          <router-link to="/soundproduction">Sound Production</router-link>
         </div>
       </div>
     </div>
@@ -116,18 +116,18 @@ a:hover {
   -o-transition: background-color 0.7s ease-in-out, color 0.7s ease-in-out;
   -webkit-transition: background-color 0.7s ease-in-out, color 0.7s ease-in-out;
   transition: background-color 0.7s ease-in-out, color 0.7s ease-in-out;
-  transition-delay: 0.1s;
+  transition-delay: 0s;
 }
 .menu #academy:hover {
   background-color: white;
   color: #0f6186;
 }
-.menu #sound:hover {
+.menu #video:hover {
   background-color: white;
   color: #025f02;
 }
-.menu #video:hover {
+.menu #sound:hover {
   background-color: white;
-  color: #830909 !important;
+  color: #830909;
 }
 </style>

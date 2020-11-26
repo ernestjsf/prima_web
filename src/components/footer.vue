@@ -7,8 +7,10 @@
       <div class="row text-center text-md-left mt-3 pb-3">
         <!-- Grid column -->
         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-          <h6 class="text-uppercase mb-4 font-weight-bold">PRIMA Future</h6>
-          <p>Building the future!</p>
+          <router-link to="/">
+            <h6 class="text-uppercase mb-4 font-weight-bold">PRIMA Future</h6>
+            <p>Building the future!</p>
+          </router-link>
         </div>
         <!-- Grid column -->
 
@@ -18,13 +20,13 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
           <h6 class="text-uppercase mb-4 font-weight-bold">Services</h6>
           <p>
-            <a href="#!">Academy</a>
+            <router-link to="/academy">Academy</router-link>
           </p>
           <p>
-            <a href="#!">Video Production</a>
+            <router-link to="/videoproduction">Video Production</router-link>
           </p>
           <p>
-            <a href="#!">Sound Production</a>
+            <router-link to="/soundproduction">Sound Production</router-link>
           </p>
         </div>
         <!-- Grid column -->
@@ -87,9 +89,8 @@
 <script>
 export default {};
 </script>
-<style lang="scss" scoped>
+<style lang="scss" >
 .page-footer {
-  padding-bottom: 20px;
   background-color: #101214;
   color: white;
   a {
